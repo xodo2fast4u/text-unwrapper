@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Text Unwrapper | Clean & Format Multi-line Text Online</title>
+    <meta
+      name="title"
+      content="Text Unwrapper | Clean & Format Multi-line Text Online"
+    />
+    <meta
+      name="description"
+      content="Quickly remove line breaks and format messy multi-line text into a single, clean paragraph. Perfect for PDF extracts, emails, and code cleaning."
+    />
+    <meta
+      name="keywords"
+      content="text unwrapper, remove line breaks, text formatter, remove newlines, clean text online, pdf to text cleaner"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://yourdomain.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta
+      property="og:title"
+      content="Text Unwrapper | Format Multi-line Text Instantly"
+    />
+    <meta
+      property="og:description"
+      content="Stop manually deleting line breaks. Use our free tool to unwrap text in seconds."
+    />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/apple-touch-icon.png"
+    />
+    <meta property="og:image:width" content="180" />
+    <meta property="og:image:height" content="180" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Text Unwrapper" />
+    <meta
+      name="twitter:description"
+      content="Quickly remove line breaks and format messy text."
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourdomain.com/apple-touch-icon.png"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="min-h-screen flex flex-col items-center justify-center p-4">
+    <main class="w-full max-w-2xl card p-8">
+      <header class="mb-8 text-center">
+        <h1 class="text-4xl font-black mb-2" style="color: var(--primary)">
+          Text Unwrapper
+        </h1>
+        <p class="text-muted font-medium">
+          Streamline multi-line text into a single cohesive line.
+        </p>
+      </header>
+
+      <section class="space-y-6">
+        <div>
+          <label
+            for="inputArea"
+            class="block text-sm font-bold mb-2 uppercase tracking-wider opacity-70"
+          >
+            Raw Text
+          </label>
+          <textarea
+            id="inputArea"
+            placeholder="Paste messy text here..."
+            class="w-full h-44 p-5 rounded-2xl input-style text-lg resize-none leading-relaxed"
+          ></textarea>
+        </div>
+
+        <div class="flex justify-center opacity-50" aria-hidden="true">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </div>
+
+        <div>
+          <label
+            for="outputArea"
+            class="block text-sm font-bold mb-2 uppercase tracking-wider opacity-70"
+          >
+            Formatted Result
+          </label>
+          <div class="relative group">
+            <textarea
+              id="outputArea"
+              readonly
+              placeholder="Cleaned text will appear here..."
+              class="w-full h-32 p-5 rounded-2xl bg-opacity-50 input-style text-base cursor-default resize-none"
+            ></textarea>
+
+            <button
+              id="copyBtn"
+              aria-label="Copy to clipboard"
+              class="absolute top-3 right-3 px-4 py-2 rounded-xl text-sm font-bold copy-btn flex items-center gap-2"
+            >
+              <svg
+                id="copyIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                />
+              </svg>
+              <span id="copyText">Copy</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <button
+            id="clearBtn"
+            class="w-full py-4 rounded-2xl btn-primary font-bold text-lg uppercase tracking-widest"
+          >
+            Clear All
+          </button>
+        </div>
+      </section>
+
+      <footer class="mt-12 text-sm text-muted leading-relaxed border-t pt-6">
+        <h2 class="text-lg font-bold mb-2">
+          How to remove line breaks from text?
+        </h2>
+        <p>
+          Our <strong>Text Unwrapper</strong> is a free tool designed to clean
+          up messy text formatting. Whether you're copying from a
+          <strong>PDF</strong>, an <strong>email</strong>, or a
+          <strong>code snippet</strong>, manual line breaks can ruin your
+          document. Simply paste your text above and we'll automatically remove
+          unnecessary newlines to create a clean, continuous paragraph.
+        </p>
+      </footer>
+
+      <div
+        id="toast"
+        class="fixed bottom-10 left-1/2 -translate-x-1/2 px-6 py-3 rounded-2xl shadow-2xl opacity-0 transition-all duration-300 pointer-events-none font-bold"
+        style="background-color: var(--primary); color: white"
+      >
+        Copied to clipboard!
+      </div>
+    </main>
+    <script defer src="main.js"></script>
+  </body>
+</html>
